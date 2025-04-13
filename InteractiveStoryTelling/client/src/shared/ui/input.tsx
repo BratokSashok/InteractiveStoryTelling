@@ -1,11 +1,32 @@
-import { FC, ButtonHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, forwardRef } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const Button: FC<ButtonProps> = ({ children, ...props }) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+  const {
+    type,
+    name,
+    autoComplete,
+    className,
+    ...rest
+  } = props;
+
+  const computedAutoComplete =
+    autoComplete ||
+    (type === "password" ? "current-password" :
+    name === "username" ? "username" :
+    undefined);
+
   return (
-    <button {...props} className="button">
-      {children}
-    </button>
+    <input
+      {...rest}
+      ref={ref}
+      type={type}
+      name={name}
+      autoComplete={computedAutoComplete}
+      className={`rounded ${className ?? ""}`}
+    />
   );
-};
+});
+
+Input.displayName = "Input";
