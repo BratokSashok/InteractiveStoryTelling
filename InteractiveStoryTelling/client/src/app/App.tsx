@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Header } from '@widgets/ui/Header';
+import { Header } from '@widgets/ui/Header/Header';
 import { Outlet } from 'react-router-dom';
 
 interface DataResponse {
