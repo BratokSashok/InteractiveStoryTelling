@@ -2,7 +2,8 @@ import { FC } from 'react';
 import { Story } from '../model/types';
 
 interface StoryCardProps {
-  product: Story;
+  // product: Story; //не существует!
+  story: Story,
   onClick?: () => void;
   showQuantity?: boolean;
   showDiscount?: boolean;

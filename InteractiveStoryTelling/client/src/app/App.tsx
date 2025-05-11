@@ -1,9 +1,6 @@
-import { Header } from '@widgets/ui/Header/Header';
+// import { Header } from '@widgets/ui/Header/Header'; //не правильный путь
+import { Header } from '@widgets/Header/Header';
 import { Outlet } from 'react-router-dom';
-
-interface DataResponse {
-  message: string;
-}
 
 export const App = ()  => {
 
