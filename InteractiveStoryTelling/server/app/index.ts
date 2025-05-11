@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { errorHandler } from '../shared/middleware/errorHandler';
-import registrationRoutes from '../features/auth/service/registration.routes';
+import registrationRoutes from '../features/auth/routes/registration.routes';
 import reviewRoutes from '../entities/review/routes/review.routes';
 
 const app = express();

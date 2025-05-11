@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Input } from '@shared/ui/Input';
-import { Button } from '@shared/ui/Button';
+import { Button } from '@shared/ui/Button/Button';
 import { Textarea } from '@shared/ui/Textarea'; // Assuming you have a Textarea component
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

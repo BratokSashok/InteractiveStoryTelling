@@ -1,6 +1,6 @@
 
 import bcrypt from 'bcrypt';
-import { User } from '../../../entities/user/model/Users';
+import { User } from '../../../entities/user/model/User';
 
 interface RegisterData {
   username: string;
