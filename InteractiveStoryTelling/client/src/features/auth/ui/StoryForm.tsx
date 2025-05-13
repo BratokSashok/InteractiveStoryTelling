@@ -1,9 +1,11 @@
 import { useForm } from 'react-hook-form';
-import { Input } from '@shared/ui/Input';
 import { Button } from '@shared/ui/Button/Button';
 import { Textarea } from '@shared/ui/Textarea'; // Assuming you have a Textarea component
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// import { Input } from '@shared/ui/Input';//не правильный путь
+import { Input } from '@shared/ui/input';
 
 interface StoryFormValues {
   title: string;

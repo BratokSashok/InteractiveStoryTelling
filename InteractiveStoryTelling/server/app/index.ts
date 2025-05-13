@@ -12,7 +12,9 @@ app.use(express.json());
 
 // Роуты
 app.use('/api/reviews', reviewRoutes);
-app.use('api/registation', registrationRoutes)
+app.use('/api/registration', registrationRoutes);
+// app.use('api/registation', registrationRoutes)//опечатка
+
 // Middleware - глобальная обработка ошибок 
 app.use(errorHandler);
 

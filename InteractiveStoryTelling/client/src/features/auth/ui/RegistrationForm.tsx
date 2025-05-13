@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
-import { Input } from '@shared/ui/Input';
+// import { Input } from '@shared/ui/Input'; //не правильный путь к файлу
+import { Input } from '@shared/ui/input';
 import { Button } from '@shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
