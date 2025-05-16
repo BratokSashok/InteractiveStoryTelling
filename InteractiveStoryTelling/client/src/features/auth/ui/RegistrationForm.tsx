@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
-// import { Input } from '@shared/ui/Input'; //не правильный путь к файлу
-import { Input } from '@shared/ui/input';
-import { Button } from '@shared/ui/Button/Button';
+import { Input } from '@shared/ui/Input';
+// import { Button } from '@shared/ui/Button';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Button } from '@shared/ui/Button/Button';
 
 interface SignupFormValues {
   username: string;
@@ -82,7 +82,13 @@ export const RegistrationForm = () => {
         <label>Password</label>
         <Input
           type="password"
-          {...register('password', { required: 'Password is required' })}
+          {...register('password', { 
+            required: 'Password is required',
+            minLength: {
+              value: 4,
+              message: 'Password must be at least 4 characters',
+            }
+          })}
           className="CLASS__NAME"
         />
         {errors.password && <p>{errors.password.message}</p>}
@@ -92,7 +98,11 @@ export const RegistrationForm = () => {
         <label>Confirm Password</label>
         <Input
           type="password"
-          {...register('confirmPassword', { required: 'Confirm Password is required' })}
+          {...register('confirmPassword', { 
+            required: 'Confirm Password is required',
+            validate: (value) => 
+              value === watch('password') || 'Passwords do not match',
+          })}
           className="CLASS__NAME"
         />
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}

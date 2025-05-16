@@ -4,8 +4,8 @@ import { sequelize } from '../../../sequilize';
 
 export interface UserAttributes {
   id: number;
-  name: string;
   email: string;
+  username: string;
   password: string;
 }
 
@@ -17,8 +17,9 @@ export const User = sequelize.define<Model<UserAttributes, UserCreationAttribute
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
+    allowNull: false,
   },
-  name: {
+  username: {
     type: DataTypes.STRING(100),
     allowNull: true,
   },

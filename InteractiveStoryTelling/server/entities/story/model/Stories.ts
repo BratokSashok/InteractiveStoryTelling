@@ -1,25 +1,23 @@
 
 import { DataTypes, Model } from 'sequelize';
 import { sequelize } from '../../../sequilize';
+import { Tags } from '../../tags/model/Tags';
 import { User } from '../../user/model/User';
 
-export interface ReviewData {
+export interface StoriesData {
   id: number;
-  user_id: number;
   name: string;
   description: string;
-  value: number;
+  count: number;
+  user_id: number;
+  tag_id: number;
 }
 
-export const Review = sequelize.define<Model<ReviewData>>('Review', {
+export const Stories = sequelize.define<Model<StoriesData>>('stories', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
     primaryKey: true,
-  },
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
   },
   name: {
     type: DataTypes.STRING(200),
@@ -29,15 +27,27 @@ export const Review = sequelize.define<Model<ReviewData>>('Review', {
     type: DataTypes.STRING(500),
     allowNull: false,
   },
-  value: {
+  count: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  tag_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
 }, {
-  tableName: 'reviews',
+  tableName: 'stories',
   timestamps: false,
 });
 
 // Связь: один пользователь может иметь много отзывов
-User.hasMany(Review, { foreignKey: 'user_id' });
-Review.belongsTo(User, { foreignKey: 'user_id' });
+User.hasMany(Stories, { foreignKey: 'user_id' });
+Stories.belongsTo(User, { foreignKey: 'user_id' });
+Tags.hasMany(Stories, { foreignKey: 'user_id' });
+Stories.hasMany(Tags, { foreignKey: 'user_id' });
+
+
