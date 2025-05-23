@@ -20,8 +20,6 @@ export const Tags = sequelize.define<Model<TagsAttributes, TagCreationAttributes
     allowNull: true,
   },
 }, {
-  tableName: 'users',
+  tableName: 'tags',
   timestamps: false,
 });
-
-

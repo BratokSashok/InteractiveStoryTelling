@@ -9,7 +9,6 @@ export const App = ()  => {
     <>
     <Header />
     <main>
-      <h1>Home</h1>
       <Outlet />
     </main>
     </>

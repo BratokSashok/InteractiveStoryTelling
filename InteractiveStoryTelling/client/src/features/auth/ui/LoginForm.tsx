@@ -27,11 +27,11 @@ export const LoginForm = () => {
   };
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="CLASS_NAME">
+    <form onSubmit={handleSubmit(onSubmit)} className="loginForm">
       <div>
         <Input
           placeholder="Username"
-          className="CLASS_NAME"
+          className="loginForm_input"
           {...register("username", { required: "Username is required" })}
         />
       {errors.username && <p>{errors.username.message}</p>}
@@ -41,7 +41,7 @@ export const LoginForm = () => {
         <Input
           type="password"
           placeholder="Password"
-          className="CLASS_NAME"
+          className="loginForm_input"
           {...register("password", {
             required: "Password is required", 
             minLength: {

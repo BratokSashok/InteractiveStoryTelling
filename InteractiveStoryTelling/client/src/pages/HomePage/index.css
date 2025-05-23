@@ -3,7 +3,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e3e3e3;
+    background-color: whitesmoke;
     color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.home p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
+.p-logined{
+    border: 3px solid greenyellow ;
+}
+.p-unlogined{
+    border: 3px dotted lightcoral;
 }

@@ -3,13 +3,13 @@ import bcrypt from 'bcrypt';
 import { User } from '../../../entities/user/model/User';
 
 interface RegisterData {
-  username: string;
+  name: string;
   email: string;
   password: string;
 }
 
 export const registrationService = {
-  async register({ username, email, password }: RegisterData) {
+  async register({ name, email, password }: RegisterData) {
     // Проверка, существует ли пользователь с таким email
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
@@ -21,7 +21,7 @@ export const registrationService = {
 
     // Сохраняем пользователя
     const newUser = await User.create({
-      name: username,
+      name,
       email,
       password: hashedPassword,
     });

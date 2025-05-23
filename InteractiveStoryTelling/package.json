@@ -14,7 +14,8 @@
     ],
     "devDependencies": {
         "@types/react-redux": "^7.1.34",
-        "concurrently": "^8.2.2"
+        "concurrently": "^8.2.2",
+        "sequelize-cli": "^6.6.3"
     },
     "dependencies": {
         "react-redux": "^9.2.0"

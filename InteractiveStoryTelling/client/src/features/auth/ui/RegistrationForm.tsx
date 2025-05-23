@@ -58,28 +58,27 @@ export const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="CLASS__NAME">
+    <form onSubmit={handleSubmit(onSubmit)} className="regForm">
       <div>
-        <label>Username</label>
         <Input
           {...register('username', { required: 'Username is required' })}
-          className="CLASS__NAME"
+          placeholder="Username"
+          className="regForm_input"
         />
         {errors.username && <p>{errors.username.message}</p>}
       </div>
 
       <div>
-        <label>Email</label>
         <Input
           type="email"
           {...register('email', { required: 'Email is required' })}
-          className="CLASS__NAME"
+          placeholder="Email"
+          className="regForm_input"
         />
         {errors.email && <p>{errors.email.message}</p>}
       </div>
 
       <div>
-        <label>Password</label>
         <Input
           type="password"
           {...register('password', { 
@@ -89,13 +88,13 @@ export const RegistrationForm = () => {
               message: 'Password must be at least 4 characters',
             }
           })}
-          className="CLASS__NAME"
+          placeholder="Password"
+          className="regForm_input"
         />
         {errors.password && <p>{errors.password.message}</p>}
       </div>
 
       <div>
-        <label>Confirm Password</label>
         <Input
           type="password"
           {...register('confirmPassword', { 
@@ -103,12 +102,13 @@ export const RegistrationForm = () => {
             validate: (value) => 
               value === watch('password') || 'Passwords do not match',
           })}
-          className="CLASS__NAME"
+          className="regForm_input"
+          placeholder="Repeat your password"
         />
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
       </div>
 
-      <Button type="submit" className="CLASS__NAME" disabled={loading}>
+      <Button type="submit" disabled={loading}>
         {loading ? 'Registering...' : 'Register'}
       </Button>
     </form>

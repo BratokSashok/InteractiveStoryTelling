@@ -9,9 +9,9 @@ export const HomePage = () => {
     <div className='home'>
       <h1>Главная страница</h1>
       {user ? (
-        <p>Привет, {user.name}!</p>
+        <p className='p-logined'>Привет, {user.name}!</p>
       ) : (
-        <p>Вы не вошли в систему</p>
+        <p className='p-unlogined'>Вы не вошли в систему</p>
       )}
     </div>
   );
