@@ -8,6 +8,7 @@ export const HomePage = () => {
   return (
     <div className='home'>
       <h1>Главная страница</h1>
+      <hr />
       {user ? (
         <p className='p-logined'>Привет, {user.name}!</p>
       ) : (

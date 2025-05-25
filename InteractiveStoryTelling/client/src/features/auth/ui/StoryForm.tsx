@@ -3,6 +3,8 @@ import { Button } from '@shared/ui/Button/Button';
 import { Textarea } from '@shared/ui/Textarea'; // Assuming you have a Textarea component
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './index.css';
+
 
 // import { Input } from '@shared/ui/Input';//не правильный путь
 import { Input } from '@shared/ui/input';
@@ -54,8 +56,8 @@ export const StoryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-2xl mx-auto">
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)} className="story-form">
+     <div className='input-wrapper'>
         <label>Title*</label>
         <Input
           {...register('title', { required: 'Title is required' })}
@@ -65,7 +67,7 @@ export const StoryForm = () => {
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <label>Content*</label>
         <Textarea
           {...register('content', { 
@@ -77,42 +79,42 @@ export const StoryForm = () => {
           })}
           placeholder="Tell your story..."
           rows={10}
-          className="w-full"
+          className="story-form_input"
         />
         {errors.content && <p className="text-red-500">{errors.content.message}</p>}
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <label>Category</label>
         <Input
           {...register('category')}
           placeholder="e.g. Fantasy, Adventure"
-          className="w-full"
+          className="story-form_input"
         />
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <label>Tags (comma separated)</label>
         <Input
           {...register('tags')}
           placeholder="e.g. magic, dragons, quest"
-          className="w-full"
+          className="story-form_input"
         />
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <label>Image URL</label>
         <Input
           {...register('imageUrl')}
           placeholder="https://example.com/image.jpg"
-          className="w-full"
+          className="story-form_input"
         />
       </div>
 
       <Button 
         type="submit" 
-        className="w-full" 
         disabled={loading}
+        className="button"
       >
         {loading ? 'Publishing...' : 'Publish Story'}
       </Button>

@@ -5,8 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    color: rgb(0, 0, 0);
+    background-color: var(--bg-color);
+    color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .stuff_container{
@@ -26,12 +26,16 @@
 }
 .regForm{
     width: 100%;
-    height: 30%;
-    gap: 25px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     padding-top: 100px;
 }
 .regForm_input{
-    width: 25%;
+    width: 275px;
     height: 25px;
     border-radius: 10px;
     border: 1px solid black;
@@ -54,7 +58,7 @@
     transition: all 0.2s linear;
 }
 .regForm button:hover{
-    background-color: lightgray;
+    background-color: var(--bg-color);
     font-weight: bolder;
     scale: 1.1;
 }

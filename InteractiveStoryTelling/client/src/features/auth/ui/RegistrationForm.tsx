@@ -1,9 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { Input } from '@shared/ui/Input';
-// import { Button } from '@shared/ui/Button';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '@shared/ui/Button/Button';
+import './index.css';
+
 
 interface SignupFormValues {
   username: string;
@@ -59,7 +60,7 @@ export const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="regForm">
-      <div>
+      <div className='input-wrapper'>
         <Input
           {...register('username', { required: 'Username is required' })}
           placeholder="Username"
@@ -68,7 +69,7 @@ export const RegistrationForm = () => {
         {errors.username && <p>{errors.username.message}</p>}
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <Input
           type="email"
           {...register('email', { required: 'Email is required' })}
@@ -78,7 +79,7 @@ export const RegistrationForm = () => {
         {errors.email && <p>{errors.email.message}</p>}
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <Input
           type="password"
           {...register('password', { 
@@ -94,7 +95,7 @@ export const RegistrationForm = () => {
         {errors.password && <p>{errors.password.message}</p>}
       </div>
 
-      <div>
+      <div className='input-wrapper'>
         <Input
           type="password"
           {...register('confirmPassword', { 
@@ -108,7 +109,11 @@ export const RegistrationForm = () => {
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
       </div>
 
-      <Button type="submit" disabled={loading}>
+      <Button 
+        type="submit" 
+        disabled={loading}
+        className="button"
+      >
         {loading ? 'Registering...' : 'Register'}
       </Button>
     </form>

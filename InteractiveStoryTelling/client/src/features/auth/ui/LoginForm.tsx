@@ -6,6 +6,7 @@ import { Button } from "../../../shared/ui/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "@shared/store/userSlice";
+import './index.css';
 
 export const LoginForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormValues>();
@@ -53,7 +54,11 @@ export const LoginForm = () => {
         {errors.password && <p>{errors.password.message}</p>}
       </div>
      
-      <Button type="submit" disabled={loading}>
+      <Button 
+        type="submit" 
+        disabled={loading}
+        className="button"
+      >
         {loading ? "Loading..." : "Login"}
       </Button>
     </form>

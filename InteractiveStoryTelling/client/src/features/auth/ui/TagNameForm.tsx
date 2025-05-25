@@ -14,7 +14,7 @@ export const LoginForm = () => {
   const [loading, setLoading] = useState(false);
 
 
-  const onSubmit = async (data: ) => {
+  const onSubmit = async () => {
     try {
     //   await tags(data); //добавить
    
@@ -24,8 +24,8 @@ export const LoginForm = () => {
   };
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="CLASS_NAME">
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)} className="tag-form">
+      <div className='input-wrapper'>
         <Input
           placeholder="name"
           className="CLASS_NAME"
@@ -35,7 +35,11 @@ export const LoginForm = () => {
       </div>
       
      
-      <Button type="submit" disabled={loading}>
+      <Button 
+        type="submit" 
+        disabled={loading}
+        className="button"
+      >
         {loading ? "Loading..." : "Create"}
       </Button>
     </form>

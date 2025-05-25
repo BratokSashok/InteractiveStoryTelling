@@ -28,10 +28,12 @@
     font-size: 25px;
     margin: 1px;
     transition: all linear 0.2s;
+    background: #000000;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(204, 255, 0, 1) 100%);
 }
-.menu_homepage:hover{
-    scale: 0.95;
-}
+/* .menu_homepage:hover{
+    scale: 0.95; */
+
 .menu_list{
     display: flex;
     flex-direction: row;
