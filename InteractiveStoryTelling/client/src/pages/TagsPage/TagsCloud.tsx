@@ -1,4 +1,5 @@
 import { TagProps } from "./TagPage/TagPage";
+import "./index.css";
 
 interface  TagsCloud {
    tags: TagProps[]

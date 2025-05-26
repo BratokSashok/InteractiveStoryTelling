@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    color: rgb(0, 0, 0);
+    background-color: var(--bg-color);
+    color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .home h1{
