@@ -26,5 +26,5 @@ const start = async () => {
     console.error('Error while starting server:', error);
   }
 };
-
+  
 start();

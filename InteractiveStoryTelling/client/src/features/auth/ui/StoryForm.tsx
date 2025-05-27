@@ -62,7 +62,7 @@ export const StoryForm = () => {
         <Input
           {...register('title', { required: 'Title is required' })}
           placeholder="Enter story title"
-          className="w-full"
+          className="form_input w-full"
         />
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
       </div>

@@ -9,6 +9,10 @@
     gap: 5px;
     padding-top: 5px;
 }
+.form-container label{
+    display:block;
+    justify-self: left;
+}
 .form_input{
     width: 275px;
     height: 25px;
@@ -20,11 +24,11 @@
 .form-container p{
     color: red;
     margin: 0px;
-    margin-bottom: 5px;
 }
 .button{
     width: 15%;
     height: 35px;
+    margin: 20px 10px;
     border: 1px solid;
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

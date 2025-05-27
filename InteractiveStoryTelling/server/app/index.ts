@@ -17,7 +17,6 @@ app.use(errorHandler);//глобальная обработка ошибок
 // Роуты
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/registration', registrationRoutes);
-// app.use('/api/login', LoginRouter)
 app.use('/api/tags', tagsRouter);
 app.use('/api/stories', storiesRouter);
 

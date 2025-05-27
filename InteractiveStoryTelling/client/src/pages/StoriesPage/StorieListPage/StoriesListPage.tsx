@@ -22,7 +22,7 @@ export const StoriesListPage = () => {
   }, []);
 
   return (
-    <div className="all-stories">
+    <div className="another_container all-stories">
       <h1>All Stories</h1>
       <div className="stories-list">
         {stories.map(story => (
