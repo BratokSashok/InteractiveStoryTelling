@@ -56,7 +56,7 @@ export const StoryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="story-form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form-container">
      <div className='input-wrapper'>
         <label>Title*</label>
         <Input
@@ -79,7 +79,7 @@ export const StoryForm = () => {
           })}
           placeholder="Tell your story..."
           rows={10}
-          className="story-form_input"
+          className="form_input"
         />
         {errors.content && <p className="text-red-500">{errors.content.message}</p>}
       </div>
@@ -89,7 +89,7 @@ export const StoryForm = () => {
         <Input
           {...register('category')}
           placeholder="e.g. Fantasy, Adventure"
-          className="story-form_input"
+          className="form_input"
         />
       </div>
 
@@ -98,7 +98,7 @@ export const StoryForm = () => {
         <Input
           {...register('tags')}
           placeholder="e.g. magic, dragons, quest"
-          className="story-form_input"
+          className="form_input"
         />
       </div>
 
@@ -107,14 +107,14 @@ export const StoryForm = () => {
         <Input
           {...register('imageUrl')}
           placeholder="https://example.com/image.jpg"
-          className="story-form_input"
+          className="form_input"
         />
       </div>
 
       <Button 
         type="submit" 
         disabled={loading}
-        className="button"
+        className="form_button"
       >
         {loading ? 'Publishing...' : 'Publish Story'}
       </Button>

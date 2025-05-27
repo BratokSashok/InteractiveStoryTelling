@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '@shared/store';
 import "./index.css"
+import "../pages.css";
 
 export const HomePage = () => {
   const user = useSelector((state: RootState) => state.user.user);

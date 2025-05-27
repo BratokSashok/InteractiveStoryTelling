@@ -6,10 +6,11 @@ export const Header = () => {
   return (
     <header className="menu_container">
       <div className="menu_stuff">
-        
-        <Link to="/" className="menu_homepage">
-          Interactive Story Telling
-        </Link>
+        <div className='menu-homepage'>
+          <Link to="/" className="menu_homepage-link">
+            Interactive Story Telling
+          </Link>
+        </div>
 
         <nav className="menu_list">
           <Link to="/login" className="menu_page">

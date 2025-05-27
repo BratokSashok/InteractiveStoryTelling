@@ -59,12 +59,12 @@ export const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="regForm">
+    <form onSubmit={handleSubmit(onSubmit)} className="form-container">
       <div className='input-wrapper'>
         <Input
           {...register('username', { required: 'Username is required' })}
           placeholder="Username"
-          className="regForm_input"
+          className="form_input"
         />
         {errors.username && <p>{errors.username.message}</p>}
       </div>
@@ -74,7 +74,7 @@ export const RegistrationForm = () => {
           type="email"
           {...register('email', { required: 'Email is required' })}
           placeholder="Email"
-          className="regForm_input"
+          className="form_input"
         />
         {errors.email && <p>{errors.email.message}</p>}
       </div>
@@ -90,7 +90,7 @@ export const RegistrationForm = () => {
             }
           })}
           placeholder="Password"
-          className="regForm_input"
+          className="form_input"
         />
         {errors.password && <p>{errors.password.message}</p>}
       </div>
@@ -103,7 +103,7 @@ export const RegistrationForm = () => {
             validate: (value) => 
               value === watch('password') || 'Passwords do not match',
           })}
-          className="regForm_input"
+          className="form_input"
           placeholder="Repeat your password"
         />
         {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
@@ -112,7 +112,7 @@ export const RegistrationForm = () => {
       <Button 
         type="submit" 
         disabled={loading}
-        className="button"
+        className="form_button"
       >
         {loading ? 'Registering...' : 'Register'}
       </Button>

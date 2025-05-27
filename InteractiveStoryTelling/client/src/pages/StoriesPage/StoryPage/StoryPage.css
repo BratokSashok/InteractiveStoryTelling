@@ -1,0 +1,32 @@
+.story-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  
+  .story-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .story-page img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+  }
+  
+  .story-page p {
+    margin: 0.5rem 0;
+    color: #444;
+  }
+   
+  .story-page strong {
+    color: #000;
+  }

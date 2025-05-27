@@ -7,3 +7,6 @@ html,body{
   text-align: center;
 }
 
+.html,body{
+  overflow: hidden;
+}

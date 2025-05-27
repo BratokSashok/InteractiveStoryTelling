@@ -24,11 +24,11 @@ export const LoginForm = () => {
   };
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="tag-form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form-container">
       <div className='input-wrapper'>
         <Input
           placeholder="name"
-          className="CLASS_NAME"
+          className="form_input"
           {...register("name", { required: "Name is required" })}
         />
       {errors.name && <p>{errors.name.message}</p>}
@@ -38,7 +38,7 @@ export const LoginForm = () => {
       <Button 
         type="submit" 
         disabled={loading}
-        className="button"
+        className="form_button"
       >
         {loading ? "Loading..." : "Create"}
       </Button>

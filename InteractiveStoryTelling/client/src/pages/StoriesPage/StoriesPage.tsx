@@ -1,5 +1,6 @@
 import { StoryForm } from "@features/auth/ui/StoryForm";
 import "./index.css";
+import "../pages.css";
 
 export const StoriesPage = () => {
     return (

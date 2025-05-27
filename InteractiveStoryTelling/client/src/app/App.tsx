@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { RootState } from '@shared/store';
 import { useSelector } from 'react-redux';
 import { Header } from '@widgets/Header/Header';
+import "./App.css";
 
 export const App = ()  => {
   const theme = useSelector((state: RootState) => state.theme);
